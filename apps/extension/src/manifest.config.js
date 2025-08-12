@@ -8,7 +8,7 @@ export default defineManifest({
     default_popup: "index.html",
   },
   content_scripts: [{
-    js: ["src/content.jsx"],
+    js: ["src/injector.jsx"],
     matches: ["https://www.linkedin.com/jobs/collections/*"],
   }],
 });

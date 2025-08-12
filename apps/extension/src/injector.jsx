@@ -1,20 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Content from './content';
-
+import './index.css'
+import Content from './content/Content';
 
 const customButton = document.createElement('div');
-customButton.id = 'linkedin__jobfit__custom__compare__btn';
-
-
+customButton.id = '__linkedin__jobfit__custom__compare__btn';
 const linkedinJobSaveBtn = document.querySelector(".jobs-save-button");
+console.log(linkedinJobSaveBtn);
 
 linkedinJobSaveBtn.parentElement.appendChild(customButton);
 
-customButton.addEventListener('click', () => {
-  alert('Custom button clicked!');
-  // You can add any custom logic here
-});
 
 createRoot(customButton).render(
     <StrictMode>
