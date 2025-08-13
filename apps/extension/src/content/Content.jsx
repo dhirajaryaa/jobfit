@@ -43,7 +43,7 @@ function Content() {
 
   return (
     <div className="mb-8 mt-14 block px-5 py-3 text-base border border-gray-500 rounded-xl">
-      <h1 className="text-3xl font-semibold ">
+      <h1 className="text-4xl font-semibold ">
         💡 Is This Job a Match for You?
       </h1>
       <p className="text-xl text-gray-500 mt-6">
@@ -70,6 +70,9 @@ function Content() {
         </button>
       </div>
       {showResult && <ShowResult result={resultSample} />}
+
+
+      <div className="mt-3 font-semibold text-gray-500 text-right text-lg capitalize"> - powered by <a href="#" className="hover:text-violet-600">Jobfit</a></div>
     </div>
   );
 }
