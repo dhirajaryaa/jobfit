@@ -11,7 +11,8 @@ export default defineManifest({
 
   content_scripts: [
     {
-      matches: ["https://dhirajarya.xyz/*"],
+      // matches: ["https://dhirajarya.xyz/*"],
+      matches: ["https://www.linkedin.com/jobs/collections/*"],
       js: ["src/injector.jsx"],
       run_at: "document_end",
     },
