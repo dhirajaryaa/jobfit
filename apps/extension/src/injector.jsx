@@ -1,18 +1,29 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import Content from './content/Content';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./content/content.css";
+import Content from "./content/Content";
 
-const customButton = document.createElement('div');
-customButton.id = '__linkedin__jobfit__custom__compare__btn';
-const linkedinJobSaveBtn = document.querySelector(".jobs-save-button");
-console.log(linkedinJobSaveBtn);
+// create new element
+const jobfit__wrapper = document.createElement("section");
+jobfit__wrapper.id = "__jobfit__linkedin__custom__root__wrapper";
 
-linkedinJobSaveBtn.parentElement.appendChild(customButton);
+// inject on dom
+const linkedin__root = document.querySelector("#home");
+linkedin__root.appendChild(jobfit__wrapper);
 
+// check dom ready or not
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM ready");
+    // Your code here
+  });
+} else {
+  console.log("DOM already ready");
+  // Your code here
+}
 
-createRoot(customButton).render(
-    <StrictMode>
-        <Content />
-    </StrictMode>
-)
+createRoot(jobfit__wrapper).render(
+  <StrictMode>
+    <Content />
+  </StrictMode>
+);
